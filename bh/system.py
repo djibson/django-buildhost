@@ -73,7 +73,7 @@ def apache():
     version = env.APACHE.replace('httpd-', '')
     apache_pkg = _get_pkg('http://apache.mirrors.spacedump.net//httpd/httpd-{}.tar.gz'.format(version))
     # get latest apr/apr-util (note: required as not bundled for apache 2.4+)
-    apr_pkg = _get_pkg('http://apache.mirrors.spacedump.net/apr/apr-1.5.0.tar.gz')
+    apr_pkg = _get_pkg('http://apache.mirrors.spacedump.net/apr/apr-1.5.1.tar.gz')
     apr_util_pkg = _get_pkg('http://apache.mirrors.spacedump.net/apr/apr-util-1.5.3.tar.gz')
     with cd(env.build):
         run('mkdir -p ./srclib')
